@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="beae7910-ca84-44c6-88fe-f84b18cfb4cf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projets3/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projets3/ChatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projets3/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projets3/ChatServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projets3/ClientPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projets3/ClientPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projets3/FirstPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projets3/FirstPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projets3/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projets3/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projets3/ServerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projets3/ServerPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/projets3/ValidatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/projets3/ValidatingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/projets3/Server-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/projets3/Server-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/projets3/client-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/projets3/client-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/projets3/firstpage-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/projets3/firstpage-view.fxml" afterDir="false" />
@@ -47,15 +38,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_directory_selection": "C:/JAVA/projetS3/src/main/java/com/example/projets3",
-    "last_opened_file_path": "C:/JAVA/projetS3'"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/JAVA/projetS3/src/main/java/com/example/projets3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JAVA/projetS3'&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="FirstPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.projets3.FirstPage" />

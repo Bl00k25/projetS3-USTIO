@@ -9,14 +9,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projets3.FirstPageController">
+<AnchorPane stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projets3.FirstPageController">
 
    <children>
       <SplitPane dividerPositions="0.6019385026737967" prefHeight="840.0" prefWidth="1531.0">
         <items>
           <AnchorPane prefHeight="960.0" prefWidth="998.0">
                <children>
-                  <Button fx:id="ClientButton" layoutX="416.0" layoutY="394.0" mnemonicParsing="false" onAction="#onClientButtonClick" prefHeight="52.0" prefWidth="134.0" text="Deviner" textAlignment="CENTER">
+                  <Button fx:id="ClientButton" layoutX="416.0" layoutY="394.0" mnemonicParsing="false" onAction="#onClientButtonClick" prefHeight="52.0" prefWidth="134.0" style="-fx-border-radius: 40px;" text="Deviner" textAlignment="CENTER">
                      <font>
                         <Font name="Times New Roman" size="13.0" />
                      </font>
@@ -26,7 +26,7 @@
                         <Font name="Times New Roman" size="13.0" />
                      </font>
                   </Button>
-                  <Label alignment="CENTER" layoutX="-8.0" prefHeight="26.0" prefWidth="1106.0" text="Bienvenue à vous , ô testeur !" textFill="#c75656">
+                  <Label id="Titre" alignment="CENTER" layoutX="-8.0" prefHeight="26.0" prefWidth="1106.0" text="Bienvenue à vous , ô testeur !" textFill="#841f1f">
                      <font>
                         <Font name="Segoe UI Italic" size="17.0" />
                      </font>

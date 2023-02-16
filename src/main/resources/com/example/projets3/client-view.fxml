@@ -11,13 +11,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projets3.ClientPageController">
+<AnchorPane stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projets3.ClientPageController">
    <children>
       <SplitPane dividerPositions="0.6" prefHeight="840.0" prefWidth="1560.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Text fill="#631e1e" layoutX="268.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue à toi , ô Outsider !">
+                  <Text id="Titre" fill="#631e1e" layoutX="268.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue à toi , ô Outsider !">
                      <font>
                         <Font name="Segoe UI Light" size="24.0" />
                      </font>
