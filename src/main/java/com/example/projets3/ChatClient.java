@@ -1,60 +1,104 @@
 package com.example.projets3;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import javafx.scene.control.TextArea;
+
+import java.io.*;
 import java.net.Socket;
-import java.util.Scanner;
+
 
 public class ChatClient {
-    public static void main(String[] args) {
+
+    private Socket socket;
+    private BufferedWriter bufferedWriter;
+    private BufferedReader bufferedReader;
+    public ChatClient(Socket socket) {
         try {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("entrer l'adresse ip du server:");
-            String localhost=sc.nextLine();
-            Socket client = new Socket(localhost, 6666);
-            System.out.println("Le client s'est connecté");
-
-            DataInputStream in = new DataInputStream(client.getInputStream());
-            DataOutputStream out = new DataOutputStream(client.getOutputStream());
-            Scanner scanner = new Scanner(System.in);
-
-            System.out.println("Entrez votre nom: ");
-            String name = scanner.nextLine();
-            out.writeUTF(name);
-
-            Receiver receiver = new Receiver(in);
-            receiver.start();
-
-            String message = "";
-            while (!message.equals("exit")) {
-                message = scanner.nextLine();
-                out.writeUTF(message);
-                out.flush();
-            }
-            client.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        this.socket=socket;
+        this.bufferedReader=new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        this.bufferedWriter=new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+    }catch (IOException ioe)
+    {
+        System.out.println("Erreur lors de la création du serveur");
+        ioe.getStackTrace();
+        closeEverything(socket,bufferedReader,bufferedWriter);
     }
+
 }
 
-class Receiver extends Thread {
-    DataInputStream in;
-
-    public Receiver(DataInputStream in) {
-        this.in = in;
-    }
-
-    public void run() {
-        while (true) {
-            try {
-                String message = in.readUTF();
-                System.out.println(message);
-            } catch (IOException e) {
-                e.printStackTrace();
-                break;
+    public  void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter)
+    {
+        try{
+            if(bufferedReader!=null)
+            {
+                bufferedReader.close();
             }
+            if(bufferedWriter!=null)
+            {
+                bufferedWriter.close();
+            }
+            if(socket!=null)
+            {
+                socket.close();
+            }
+
+        }catch (IOException ioe)
+        {
+            ioe.getStackTrace();
         }
     }
+
+    public void sendMessages(String message) {
+        try{
+            bufferedWriter.write(message);
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
+        }
+        catch (IOException ioException)
+        {
+            ioException.getStackTrace();
+            System.out.println("Erreur lors de l'envoi du message");
+            closeEverything(socket,bufferedReader,bufferedWriter);
+        }
+    }
+
+    public void receiveMessages(TextArea TA , String mess2disp) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (socket.isConnected())
+                {
+                    try {
+                        String messageReceived = bufferedReader.readLine();
+                        ClientPageController.displayIt(messageReceived, TA , mess2disp);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        System.out.println("Erreur lors de la réception du message");
+                        closeEverything(socket,bufferedReader,bufferedWriter);
+                        break;
+                    }
+                }
+            }
+        }).start();
+    }
+
+    public void getCode(int[] code)
+    {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                if (socket.isConnected())
+                {
+                    try {
+                        int codeReceived = bufferedReader.read();
+                        code[0]=codeReceived;
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        System.out.println("Erreur lors de la réception du message");
+                        closeEverything(socket,bufferedReader,bufferedWriter);
+                    }
+                }
+            }
+        }).start();
+    }
+
 }

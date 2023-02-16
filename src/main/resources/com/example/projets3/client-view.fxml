@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projets3.ClientPageController">
+   <children>
+      <SplitPane dividerPositions="0.6" prefHeight="840.0" prefWidth="1560.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Text fill="#631e1e" layoutX="268.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue à toi , ô Outsider !">
+                     <font>
+                        <Font name="Segoe UI Light" size="24.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="38.0" layoutY="409.0" prefHeight="20.0" prefWidth="258.0" text="Essayez de déchiffrer le code adverse :">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Button fx:id="tryButton" layoutX="352.0" layoutY="521.0" mnemonicParsing="false" onAction="#onTryButtonClick" prefHeight="40.0" prefWidth="124.0" text="Essayer">
+                     <font>
+                        <Font name="Times New Roman Italic" size="14.0" />
+                     </font></Button>
+                  <Label layoutX="38.0" layoutY="159.0" text="Vous avez pour mission de deviner le nombre secret de l'adversaire , selon nos intels le nombre serait entre 0 et 200 .">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Text layoutX="38.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignation :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Spinner fx:id="numberGuessed" layoutX="42.0" layoutY="461.0" prefHeight="36.0" prefWidth="164.0" />
+               </children></AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="478.0" prefWidth="98.0">
+                <children>
+                    <ButtonBar layoutY="765.0" prefHeight="40.0" prefWidth="621.0">
+                        <buttons>
+                            <Button id="sendMessage" fx:id="sendMessage" mnemonicParsing="false" onAction="#onSendButtonClick" prefHeight="36.0" prefWidth="428.0" text="Envoyer" />
+                            <Button id="clearButton" fx:id="clearMessage" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="36.0" prefWidth="147.0" text="Tout effacer" />
+                        </buttons>
+                    </ButtonBar>
+                    <TextArea id="message" fx:id="message" layoutY="605.0" prefHeight="150.0" prefWidth="622.0" promptText="Saisir votre message" />
+                    <TextField id="pseudo" fx:id="pseudo" layoutY="571.0" prefHeight="26.0" prefWidth="621.0" promptText="Votre pseudo" />
+                    <TextArea id="display message" fx:id="displayMessage" disable="true" editable="false" prefHeight="565.0" prefWidth="622.0" />
+                </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
 </AnchorPane>
