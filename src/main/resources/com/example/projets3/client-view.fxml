@@ -15,9 +15,9 @@
    <children>
       <SplitPane dividerPositions="0.6" prefHeight="840.0" prefWidth="1560.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane id="ToFill" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Text id="Titre" fill="#631e1e" layoutX="268.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue à toi , ô Outsider !">
+                  <Text id="Titre" fx:id="Title" layoutX="268.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue à toi , ô Outsider !">
                      <font>
                         <Font name="Segoe UI Light" size="24.0" />
                      </font>
@@ -42,7 +42,7 @@
                   </Text>
                   <Spinner fx:id="numberGuessed" layoutX="42.0" layoutY="461.0" prefHeight="36.0" prefWidth="164.0" />
                </children></AnchorPane>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="478.0" prefWidth="98.0">
+            <AnchorPane id="ToFill" minHeight="0.0" minWidth="0.0" prefHeight="478.0" prefWidth="98.0">
                 <children>
                     <ButtonBar layoutY="765.0" prefHeight="40.0" prefWidth="621.0">
                         <buttons>
@@ -50,9 +50,9 @@
                             <Button id="clearButton" fx:id="clearMessage" mnemonicParsing="false" onAction="#onClearButtonClick" prefHeight="36.0" prefWidth="147.0" text="Tout effacer" />
                         </buttons>
                     </ButtonBar>
-                    <TextArea id="message" fx:id="message" layoutY="605.0" prefHeight="150.0" prefWidth="622.0" promptText="Saisir votre message" />
-                    <TextField id="pseudo" fx:id="pseudo" layoutY="571.0" prefHeight="26.0" prefWidth="621.0" promptText="Votre pseudo" />
-                    <TextArea id="display message" fx:id="displayMessage" disable="true" editable="false" prefHeight="565.0" prefWidth="622.0" />
+                    <TextArea id="message" fx:id="message" layoutY="605.0" opacity="0.5" prefHeight="150.0" prefWidth="622.0" promptText="Saisir votre message" />
+                    <TextField id="pseudo" fx:id="pseudo" layoutY="571.0" opacity="0.5" prefHeight="26.0" prefWidth="621.0" promptText="Votre pseudo" />
+                    <TextArea id="displaymessage" fx:id="displayMessage" disable="true" editable="false" opacity="0.5" prefHeight="565.0" prefWidth="622.0" />
                 </children>
             </AnchorPane>
         </items>

@@ -3,6 +3,7 @@ package com.example.projets3;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -16,6 +17,7 @@ public class ClientPageController implements Initializable {
     public TextField pseudo;
     public TextArea displayMessage;
     public Spinner<Integer> numberGuessed;
+    public Text Title;
     private ChatClient client;
     private String host;
     private int[] code = new int[1];
@@ -57,6 +59,9 @@ public class ClientPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        SpinnerController spin = new SpinnerController(Title);
+        spin.start();
+
         SpinnerValueFactory<Integer> spinnerValueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 200);
         spinnerValueFactory.setValue(0);
         numberGuessed.setValueFactory(spinnerValueFactory);

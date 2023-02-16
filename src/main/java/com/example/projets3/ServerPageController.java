@@ -22,6 +22,7 @@ public class ServerPageController implements Initializable {
     public TextArea message;
     public TextField pseudonymie;
     public TextArea displayMessage ;
+    public Text Title;
 
     private String message2display = "";
 
@@ -65,6 +66,9 @@ public class ServerPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        SpinnerController spin = new SpinnerController(Title);
+        spin.start();
+
         SpinnerValueFactory<Integer> spinnerValueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,200);
         spinnerValueFactory.setValue(0);
         number2guess.setValueFactory(spinnerValueFactory);

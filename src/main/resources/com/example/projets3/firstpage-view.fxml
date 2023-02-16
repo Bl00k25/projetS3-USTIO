@@ -14,7 +14,7 @@
    <children>
       <SplitPane dividerPositions="0.6019385026737967" prefHeight="840.0" prefWidth="1531.0">
         <items>
-          <AnchorPane prefHeight="960.0" prefWidth="998.0">
+          <AnchorPane id="ToFill" prefHeight="960.0" prefWidth="998.0">
                <children>
                   <Button fx:id="ClientButton" layoutX="416.0" layoutY="394.0" mnemonicParsing="false" onAction="#onClientButtonClick" prefHeight="52.0" prefWidth="134.0" style="-fx-border-radius: 40px;" text="Deviner" textAlignment="CENTER">
                      <font>
@@ -26,7 +26,7 @@
                         <Font name="Times New Roman" size="13.0" />
                      </font>
                   </Button>
-                  <Label id="Titre" alignment="CENTER" layoutX="-8.0" prefHeight="26.0" prefWidth="1106.0" text="Bienvenue à vous , ô testeur !" textFill="#841f1f">
+                  <Label id="Titre" alignment="CENTER" layoutX="-8.0" prefHeight="26.0" prefWidth="1106.0" text="Bienvenue à vous , ô testeur !">
                      <font>
                         <Font name="Segoe UI Italic" size="17.0" />
                      </font>
@@ -35,15 +35,15 @@
                   <Label layoutX="80.0" layoutY="124.0" prefHeight="30.0" prefWidth="840.0" text="Veuiller cliquer sur faire deviner pour faire deviner un nombre à votre adversaire et sur deviner pour deviner le nombre choisi par l'adversaire" />
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="876.0" prefWidth="417.0">
+          <AnchorPane id="ToFill" minHeight="0.0" minWidth="0.0" prefHeight="876.0" prefWidth="417.0">
                <children>
-                  <TextField id="pseudo" fx:id="pseudo" layoutX="-6.0" layoutY="619.0" prefHeight="30.0" prefWidth="432.0" promptText="Saisir votre pseudo">
+                  <TextField id="pseudo" fx:id="pseudo" layoutX="-6.0" layoutY="619.0" opacity="0.5" prefHeight="30.0" prefWidth="432.0" promptText="Saisir votre pseudo">
                      <font>
                         <Font name="System Italic" size="12.0" />
                      </font>
                   </TextField>
-                  <TextArea id="message" fx:id="message" layoutX="-6.0" layoutY="649.0" prefHeight="130.0" prefWidth="432.0" promptText="Votre message ici" />
-                  <TextArea fx:id="displayMessage" disable="true" editable="false" layoutX="-3.0" prefHeight="610.0" prefWidth="432.0" />
+                  <TextArea id="message" fx:id="message" layoutX="-6.0" layoutY="649.0" opacity="0.5" prefHeight="130.0" prefWidth="432.0" promptText="Votre message ici" />
+                  <TextArea fx:id="displayMessage" disable="true" editable="false" layoutX="-3.0" opacity="0.5" prefHeight="610.0" prefWidth="432.0" />
                   <ButtonBar layoutX="-3.0" layoutY="798.0" prefHeight="38.0" prefWidth="432.0">
                     <buttons>
                         <Button mnemonicParsing="false" onAction="#onSendButtonClick" prefHeight="38.0" text="Envoyer" />
